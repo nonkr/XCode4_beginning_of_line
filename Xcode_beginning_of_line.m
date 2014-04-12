@@ -14,7 +14,8 @@ static void doCommandBySelector( id self_, SEL _cmd, SEL selector )
         selector == @selector(moveToLeftEndOfLineAndModifySelection:);
         
         if (selector == @selector(deleteToBeginningOfLine:) ||
-            selector == @selector(moveToBeginningOfLine:) ||
+// 注释该行，使得使用上下移动行的快捷键时不会导致该行被缩进到行首
+//          selector == @selector(moveToBeginningOfLine:) ||
             selector == @selector(moveToBeginningOfParagraph:) ||
             selector == @selector(moveToLeftEndOfLine:) || selectionModified)
         {
